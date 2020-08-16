@@ -17,7 +17,6 @@ This package built in **[Laravel 7](https://laravel.com/)** could be considered 
 
 ### Plugins used 
 
-- **[Bootstrap CSS](https://getbootstrap.com/)** - Core CSS Library
 - **[Laravel Collective](https://laravelcollective.com/)** - HTML and Form builder
 
 ### System Requirements
@@ -26,29 +25,29 @@ This package built in **[Laravel 7](https://laravel.com/)** could be considered 
 -  **[Compoer](https://getcomposer.org/)**
 -  **[npm](https://www.npmjs.com/)**
  
-### Frontend Framework - Bulma
+## Frontend Framework - Bulma
 
 -  **[Bulma](https://bulma.io/)** - Open source CSS framework based on Flexbox
 
-####  Bulma Extensions
+###  Bulma Extensions
 
 -  **[Toast](https://rfoel.github.io/bulma-toast/)** - Bulma's pure JavaScript extension to display toasts
 -  **[Divider](https://demo.creativebulma.net/components/divider/1.1/)** - Easily display an horizontal or vertical divider with optional text.
 -  **[Datepicker](https://creativebulma.net/product/calendar/demo)** - Calendar component with range selection capability
 
 
-####  Other Libraries
+###  Other Libraries
  
 -  **[Font Awesome](https://fontawesome.com/icons?d=gallery)** - For Icons
 -  **[Nunito Font](https://fonts.googleapis.com/css?family=Nunito:400,700)** - For Font
 -  **[Animate.css](https://animate.style/)** - CSS Animation
 
  
-####  Customization
+###  Customization
 
 **[Customization](https://bulma.io/documentation/customize/with-node-sass/)** of the application is done with node-sass.
  
-##### Steps for customization
+#### Steps for customization
 
 1. Update scss file present at **/sass/mystyles.scss**
 2. Rebuild node-sass using command - `npm rebuild node-sass`
@@ -56,7 +55,7 @@ This package built in **[Laravel 7](https://laravel.com/)** could be considered 
 4. Step-4 should create css file at **/css/mystyles.css**
 5. Include **/css/mystyles.css** on the html pages.
  
-##### Modular Approach
+#### Modular Approach
 
 The **[modular apprach of Bulma](https://bulma.io/documentation/overview/modular/)** allows components integration as on required. This approach is practiced in this project. Therefore, component is to be added to *.scss* file in order to use it.
  
@@ -72,9 +71,9 @@ The following components are used in this projects.
 | Grid | *all* |
 | Layout | *all* |
  
-### Setup & Installation
+## Setup & Installation
  
-#### Source code
+### Source code
 Download the source code and then run following commands from source folder.
 ```
 $ composer install
@@ -82,7 +81,7 @@ $ npm install
 $ npm run dev
 ```
 
-#### Environment
+### Environment
 Create database user along with database and update detail in .env file. Then run following command from the source folder. It will create auth tables and two other tables `designations` and `staff_members` in the database.
 ```
 php artisan migrate --seed
@@ -93,12 +92,12 @@ This will create necessary tables and one user account to start with. Remember t
 | -------- | -------- |
 | admin@email.com | simple |
 
-#### Execution
+### Execution
 Run the following command to start application.
 ```
 php artisan serve
 ```
-#### Troubleshooting
+### Troubleshooting
 In case some error occurs, you could try follwing commands to solve cache related errors.
 ```
 php artisan optimize:clear
