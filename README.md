@@ -21,12 +21,59 @@ This package built in **[Laravel 7](https://laravel.com/)** could be considered 
 - **[Laravel Collective](https://laravelcollective.com/)** - HTML and Form builder
 
 ### System Requirements
-- **[Laravel System Requirements](https://laravel.com/docs/7.x/installation)**
-- **[Compoer](https://getcomposer.org/)**
-- **[npm](https://www.npmjs.com/)**
 
+-  **[Laravel System Requirements](https://laravel.com/docs/7.x/installation)**
+-  **[Compoer](https://getcomposer.org/)**
+-  **[npm](https://www.npmjs.com/)**
+ 
+### Frontend Framework - Bulma
+
+-  **[Bulma](https://bulma.io/)** - Open source CSS framework based on Flexbox
+
+####  Bulma Extensions
+
+-  **[Toast](https://rfoel.github.io/bulma-toast/)** - Bulma's pure JavaScript extension to display toasts
+-  **[Divider](https://demo.creativebulma.net/components/divider/1.1/)** - Easily display an horizontal or vertical divider with optional text.
+-  **[Datepicker](https://creativebulma.net/product/calendar/demo)** - Calendar component with range selection capability
+
+
+####  Other Libraries
+ 
+-  **[Font Awesome](https://fontawesome.com/icons?d=gallery)** - For Icons
+-  **[Nunito Font](https://fonts.googleapis.com/css?family=Nunito:400,700)** - For Font
+-  **[Animate.css](https://animate.style/)** - CSS Animation
+
+ 
+####  Customization
+
+**[Customization](https://bulma.io/documentation/customize/with-node-sass/)** of the application is done with node-sass.
+ 
+##### Steps for customization
+
+1. Update scss file present at **/sass/mystyles.scss**
+2. Rebuild node-sass using command - `npm rebuild node-sass`
+3. Build css file using command - `npm run css-build`.
+4. Step-4 should create css file at **/css/mystyles.css**
+5. Include **/css/mystyles.css** on the html pages.
+ 
+##### Modular Approach
+
+The **[modular apprach of Bulma](https://bulma.io/documentation/overview/modular/)** allows components integration as on required. This approach is practiced in this project. Therefore, component is to be added to *.scss* file in order to use it.
+ 
+The following components are used in this projects.
+| Category | Plugins |
+| :------- | :------ |
+| Utilities | *all* |
+| Base | *all* |
+| Helpers | *all* |
+| Components | navbar, menu, tabs, card, level |
+| Elements | button, container, title, content, image |
+| Form | *all* |
+| Grid | *all* |
+| Layout | *all* |
+ 
 ### Setup & Installation
-
+ 
 #### Source code
 Download the source code and then run following commands from source folder.
 ```
@@ -51,7 +98,6 @@ Run the following command to start application.
 ```
 php artisan serve
 ```
-
 #### Troubleshooting
 In case some error occurs, you could try follwing commands to solve cache related errors.
 ```

@@ -21,7 +21,7 @@ Route::get('/', 'LandingController@landing');
  *
  * If application donen't need registration set register to false
  */
-Auth::routes(['register' => false]);
+Auth::routes(['register' => true]);
 
 /**
  * All these routes are protected and requires login

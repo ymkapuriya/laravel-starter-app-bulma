@@ -6,18 +6,19 @@
  */
 $id = str_replace('_', '-', $name);
 ?>
-<div class="form-group">
+<div class="field">
     @if (isset($attributes['label']))
-    {{ Form::label($id, $attributes['label'], ['class' => '']) }}
+    {{ Form::label($id, $attributes['label'], ['class' => 'label']) }}
     @else
-    {{ Form::label($id, null, ['class' => '']) }}
+    {{ Form::label($id, null, ['class' => 'label']) }}
     @endif
-    <div class="input-group mb-2">
-        <div class="input-group-prepend">
-            <div class="input-group-text">
-                <i class="material-icons prefix">smartphone</i>
-            </div>
-        </div>
-        <input type="tel" id="{{ $id }}" name="{{ $name }}" placeholder="XXXXXXXXXX" value="{{ $value }}" pattern="[0-9]{10}" class="form-control">
+    <div class="control has-icons-left">
+        <input type="tel" id="{{ $id }}" name="{{ $name }}" placeholder="XXXXXXXXXX" value="{{ $value }}" pattern="[0-9]{10}" class="input">
+        <span class="icon is-small is-left">
+            <i class="material-icons prefix">smartphone</i>
+        </span>
     </div>
+    @if (isset($attributes['hint']))
+    <p class="help is-success">{{ $attributes['hint'] }}</p>
+    @endif
 </div>

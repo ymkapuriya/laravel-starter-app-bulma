@@ -6,18 +6,18 @@
  */
 $options = ['' => 'Select option'] + $options;
 ?>
-<div class="form-group">
+<div class="field">
     @if (isset($attributes['label']))
-    {{ Form::label($name, $attributes['label'], ['class' => '']) }}
+    {{ Form::label($name, $attributes['label'], ['class' => 'label']) }}
     @else
-    {{ Form::label($name, null, ['class' => '']) }}
+    {{ Form::label($name, null, ['class' => 'label']) }}
     @endif
-    <div class="input-group mb-2">
-        <div class="input-group-prepend">
-            <div class="input-group-text">
-                <i class="material-icons prefix">unfold_more</i>
-            </div>
+    <div class="control has-icons-left">
+        <div class="select">
+            {{ Form::select($name, $options, $value, ['class' => 'custom-select']) }}
         </div>
-        {{ Form::select($name, $options, $value, ['class' => 'custom-select']) }}
+        <div class="icon is-small is-left">
+            <i class="material-icons prefix">unfold_more</i>
+        </div>
     </div>
 </div>

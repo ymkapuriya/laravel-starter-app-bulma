@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'DEFAULT_RPP' => 10,
+    'DEFAULT_RPP' => 5,
     'DESIGNATION_TYPE' => [
         'TEACHING' => 'TEACHING',
         'NON_TECHING' => 'NON TEACHING',

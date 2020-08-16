@@ -6,18 +6,19 @@
  */
 $id = str_replace('_', '-', $name);
 ?>
-<div class="form-group">
+<div class="field">
     @if (isset($attributes['label']))
-    {{ Form::label($id, $attributes['label'], ['class' => '']) }}
+    {{ Form::label($id, $attributes['label'], ['class' => 'label']) }}
     @else
-    {{ Form::label($id, null, ['class' => '']) }}
+    {{ Form::label($id, null, ['class' => 'label']) }}
     @endif
-    <div class="input-group mb-2">
-        <div class="input-group-prepend">
-            <div class="input-group-text">
-                <i class="material-icons prefix">alternate_email</i>
-            </div>
-        </div>
-        {{ Form::email($name, $value, array_merge(['id' => $id, 'class' => 'form-control', 'placeholder' => 'a@b.c'], $attributes)) }}
+    <div class="control has-icons-left">
+        {{ Form::email($name, $value, array_merge(['id' => $id, 'class' => 'input'], $attributes)) }}
+        <span class="icon is-small is-left">
+            <i class="material-icons prefix">alternate_email</i>
+        </span>
     </div>
+    @if (isset($attributes['hint']))
+    <p class="help is-success">{{ $attributes['hint'] }}</p>
+    @endif
 </div>
