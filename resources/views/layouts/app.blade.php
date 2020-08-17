@@ -43,8 +43,14 @@
         <div class="alert alert-success" role="alert">
             {{ session('status') }}
         </div>
-        @endif
-        <section class="section pt-5">
+        @endif        
+        <section class="section pt-1 pb-1">       
+            @if (isset($breadcrumbs))     
+                <x-breadcrumb :links="$breadcrumbs"></x-breadcrumb>
+                <div class="divider mt-0 mb-0"></div>    
+            @endif                    
+        </section>        
+        <section class="section pt-4">
             @yield('content')
         </section>
     </main>

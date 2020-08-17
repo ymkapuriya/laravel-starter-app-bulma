@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['breadcrumbs' => []])
 
 @section('content')
 <div class="container is-fluid">

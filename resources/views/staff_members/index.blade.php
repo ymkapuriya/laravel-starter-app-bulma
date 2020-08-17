@@ -1,4 +1,10 @@
-@extends('layouts.app')
+@php
+$links = [
+    'staff members' => 'staff_members.index',
+    'list' => null
+];
+@endphp
+@extends('layouts.app', ['breadcrumbs' => $links])
 
 @section('content')
 <div class="container is-fluid">
@@ -55,14 +61,14 @@
                                         href="{{ route('staff_members.edit', $record->id) }}">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                </div>                                
+                                </div>
                                 <div class="control">
                                     {{ Form::open(['method' => 'delete', 'route' => ['staff_members.destroy', $record], 'class' => 'form-confirm'])}}
                                     <button type="submit" class="button is-danger is-inverted is-borderless is-small">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
                                     {{ Form::close() }}
-                                </div>                                
+                                </div>
                             </div>
                         </td>
                     </tr>

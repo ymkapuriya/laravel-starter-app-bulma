@@ -1,4 +1,10 @@
-@extends('layouts.app')
+@php
+    $links = [        
+        'staff members' => 'staff_members.index',
+        'create' => null
+    ];
+@endphp
+@extends('layouts.app', ['breadcrumbs' => $links])
 
 @section('content')
 <div class="container">
@@ -59,6 +65,6 @@
             </div>
         </div>
         {{ Form::close() }}
-    </article>  
+    </article>
 </div>
 @endsection

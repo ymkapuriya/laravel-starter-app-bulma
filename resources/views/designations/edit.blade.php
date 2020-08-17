@@ -1,4 +1,10 @@
-@extends('layouts.app')
+@php
+    $links = [        
+        'designations' => 'designations.index',
+        'edit' => null
+    ];
+@endphp
+@extends('layouts.app', ['breadcrumbs' => $links])
 
 @section('content')
 <div class="container">
