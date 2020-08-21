@@ -12,7 +12,7 @@ return [
     | location for this type of information, allowing packages to have
     | a conventional file to locate the various service credentials.
     |
-    */
+     */
 
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
@@ -30,4 +30,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'recaptcha' => [
+        'sitekey' => env('GOOGLE_RECAPTCHA_SITE_KEY'),
+        'secret' => env('GOOGLE_RECAPTCHA_SECRET_KEY'),
+    ],
 ];

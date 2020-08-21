@@ -6,7 +6,7 @@ Laravel is a massively popular web application framework with expressive, elegan
 ## About Package
 This package built in **[Laravel 7](https://laravel.com/)** could be considered as a starter package to start with any application to be built in Laravel using MVC architecture. Mainly it includes following features:
 
-- Authentication 
+- Authentication with Google reCAPTCHA
 - Routing with auth middleware
 - Resource controller
 - Model demonstration with relationship

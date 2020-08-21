@@ -42,6 +42,9 @@
                             @enderror
                         </div>
                         <div class="field">
+                            <x-re-captcha></x-re-captcha>
+                        </div>
+                        <div class="field">
                             <div class="control">
                                 <label class="checkbox">
                                     <input type="checkbox" name="remember" id="remember"

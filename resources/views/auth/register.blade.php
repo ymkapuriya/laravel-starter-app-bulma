@@ -74,6 +74,9 @@
                             @enderror
                         </div>
                         <div class="field">
+                            <x-re-captcha></x-re-captcha>
+                        </div>
+                        <div class="field">
                             <p class="control">
                                 <button type="submit" class="button is-primary">
                                     {{ __('Register') }}
